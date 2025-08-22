@@ -1,0 +1,38 @@
+.menu-text {
+  color: #c7c7d7;
+  font-size: 1rem;
+  margin-left: 32px;
+  line-height: 1.6875rem;
+  font-weight: normal;
+  text-decoration: none;
+
+  &:hover {
+    color: #fff;
+    font-weight: 700;
+  }
+}
+
+.download-btn{
+    @apply w-[118px] h-[34px] text-sm font-normal text-center bg-[#01c2c3] rounded-[2px] text-[#fff] border-none leading-[35px] cursor-pointer
+}
+
+.ant-dropdown {
+  background-color: #000;
+  padding: 5px;
+
+  .ant-dropdown-menu {
+    background-color: #000;
+
+    .ant-dropdown-menu-item {
+      color: #c7c7d7;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: left;
+
+      &:hover {
+        color: #fff !important;
+        background-color: #333 !important;
+      }
+    }
+  }
+}

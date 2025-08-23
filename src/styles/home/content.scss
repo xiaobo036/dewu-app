@@ -1,0 +1,66 @@
+.main-wrapper {
+  height: 100%;
+  width: 100% !important;
+  position: relative;
+  background: #000;
+
+  .background {
+    position: absolute;
+    background: url(https://h5static.dewucdn.com/node-common/cf582f4d-9e78-6e1b-2893-0f18eebbd383-2880-920.png);
+    background-size: contain;
+    top: 80px;
+    left: 0;
+    width: 100%;
+
+    .document {
+      color: #fff;
+      position: relative;
+      max-width: 1440px;
+      min-width: 1024px;
+      color: #fff;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .topBox {
+        width: 100%;
+        height: 90px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent);
+        pointer-events: none;
+      }
+
+      .documentLeft {
+        margin: 0px 177px;
+      }
+
+      .carouselRight {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        margin-right: 168px;
+
+        .posterList {
+          animation: rolling 10s linear infinite;
+          will-change: transform;
+        }
+      }
+    }
+  }
+}
+
+:where(.css-dev-only-do-not-override-l9pxc0).ant-carousel {
+  width: 140px;
+  height: 460px;
+  padding-top: 80px;
+}
+
+@keyframes rolling {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

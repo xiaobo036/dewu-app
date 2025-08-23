@@ -1,7 +1,17 @@
+import { Flex, Spin } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
+
 const LazyLoading: React.FC = () => {
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+      <Flex align="center" gap="middle">
+        <Spin
+          size="large"
+          indicator={
+            <LoadingOutlined style={{ fontSize: 48, color: "#000" }} spin />
+          }
+        />
+      </Flex>
     </div>
   );
 };

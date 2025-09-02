@@ -1,0 +1,9 @@
+.shopWrapper {
+  @apply w-full h-full bg-[white] z-[99] relative;
+
+  .innerBox {
+    @apply max-w-[1440px] min-w-[1024px] min-h-[100vh];
+    margin: 0 auto;
+    padding: 16px 96px 100px;
+  }
+}

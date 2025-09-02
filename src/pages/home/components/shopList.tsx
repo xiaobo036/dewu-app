@@ -1,0 +1,95 @@
+import { Tabs, type TabsProps } from "antd";
+import "@/styles/home/shopList.scss";
+import Selected from "./selected";
+import Footwear from "./footwear";
+import TideClothes from "./tideClothes";
+import Digital from "./digital";
+import Beauty from "./beauty";
+import Watch from "./watch";
+import Home from "./home";
+import Bag from "./bag";
+import Accessories from "./accessories";
+import TrendyToy from "./trendyToy";
+import Ladies from "./Ladies";
+
+const ShopList: React.FC = () => {
+  const tabsList: TabsProps["items"] = [
+    {
+      key: "1",
+      label: "精选",
+      children: <Selected />,
+    },
+    {
+      key: "2",
+      label: "鞋类",
+      children: <Footwear />,
+    },
+    {
+      key: "3",
+      label: "潮服",
+      children: <TideClothes />,
+    },
+    {
+      key: "4",
+      label: "数码",
+      children: <Digital />,
+    },
+    {
+      key: "5",
+      label: "美妆",
+      children: <Beauty />,
+    },
+    {
+      key: "6",
+      label: "家居",
+      children: <Home />,
+    },
+    {
+      key: "7",
+      label: "手表",
+      children: <Watch />,
+    },
+    {
+      key: "8",
+      label: "包袋",
+      children: <Bag />,
+    },
+    {
+      key: "9",
+      label: "配饰",
+      children: <Accessories />,
+    },
+    {
+      key: "10",
+      label: "潮玩",
+      children: <TrendyToy />,
+    },
+    {
+      key: "11",
+      label: "女装",
+      children: <Ladies />,
+    },
+  ];
+
+  const onChange = (key: string) => {
+    console.log(key);
+  };
+
+  return (
+    <div className="shopWrapper">
+      <div className="innerBox">
+        <div className="topBox">
+          <Tabs
+            className="shopTabs"
+            items={tabsList}
+            defaultActiveKey="1"
+            onChange={onChange}
+          />
+          <div className="shopList"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ShopList;

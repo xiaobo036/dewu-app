@@ -33,11 +33,11 @@ const Content: React.FC = () => {
         src: "https://h5static.dewucdn.com/node-common/2cafc249-f789-c06a-be9e-4df0812c8544-420-658.png",
       },
       {
-        id: 1,
+        id: 2,
         src: "https://h5static.dewucdn.com/node-common/56bca2e8-0738-d9f5-ccb4-15b1e1c83054-420-658.png",
       },
       {
-        id: 1,
+        id: 3,
         src: "https://h5static.dewucdn.com/node-common/dca560ec-ef91-b307-2b8b-138fa880daba-420-658.png",
       },
     ],
@@ -47,11 +47,11 @@ const Content: React.FC = () => {
         src: "https://h5static.dewucdn.com/node-common/2b5d552e-7d0d-ef2b-4cfd-c4493f1a184e-420-657.png",
       },
       {
-        id: 1,
+        id: 2,
         src: "https://h5static.dewucdn.com/node-common/86ddf63a-2c2b-4902-bd49-b153c5dc7bbc-420-658.png",
       },
       {
-        id: 1,
+        id: 3,
         src: "https://h5static.dewucdn.com/node-common/ab1af514-d1f1-8490-a0a6-72ac8e41a42b-306-480.png",
       },
     ],

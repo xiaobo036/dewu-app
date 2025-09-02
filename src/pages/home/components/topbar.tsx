@@ -102,7 +102,7 @@ const Topbar: React.FC = () => {
 
   return (
     <Fragment>
-      <div className="w-full f-full bg-[#000] fixed z-1000 top-0 left-0">
+      <div className="w-full bg-[#000] fixed z-50 top-0 left-0">
         <div className="max-w-[1440px] min-w-[994px] min-h-[80px] mx-auto px-[96px] py-[20px] flex justify-between items-center">
           <div className="flex align-center">
             <div className="w-[40px] h-[40px]">

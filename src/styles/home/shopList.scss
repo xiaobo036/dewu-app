@@ -1,5 +1,5 @@
 .shopWrapper {
-  @apply w-full h-full bg-[white] z-[99] relative;
+  @apply w-full h-full bg-[white] z-[99] sticky top-0 left-0;
 
   .innerBox {
     @apply max-w-[1440px] min-w-[1024px] min-h-[100vh];

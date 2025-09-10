@@ -79,12 +79,7 @@ const ShopList: React.FC = () => {
     <div className="shopWrapper">
       <div className="innerBox">
         <div className="topBox">
-          <Tabs
-            className="shopTabs"
-            items={tabsList}
-            defaultActiveKey="1"
-            onChange={onChange}
-          />
+          <Tabs items={tabsList} defaultActiveKey="1" onChange={onChange} />
           <div className="shopList"></div>
         </div>
       </div>

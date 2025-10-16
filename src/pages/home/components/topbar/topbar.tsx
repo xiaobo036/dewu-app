@@ -1,7 +1,8 @@
 import { Dropdown, Modal, Space } from "antd";
 import { RightOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
+import { useScroll } from "../../../../hooks/useScroll";
 import "@/styles/home/topbar.scss";
 
 const mechartCheckInItems: MenuProps["items"] = [
@@ -98,30 +99,20 @@ const institutionServiceItems: MenuProps["items"] = [
 ];
 
 const Topbar: React.FC = () => {
+  
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  const [display, setDisplay] = useState(true);
-
-  const handleScoll = () => {
-    if (window.scrollY > 400) {
-      setDisplay(false);
-      return;
-    }
-    setDisplay(true);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScoll);
-    return () => {
-      window.removeEventListener("scroll", handleScoll);
-    };
-  }, []);
+  const display = useScroll(400);
 
   return (
     <Fragment>
       <div
         className="w-full bg-[#000] fixed z-50 top-0 left-0"
-        style={{ display: display ? "block" : "none" }}
+        style={{
+          display: display ? "none" : "block",
+          transition: "opacity 0.3s ease-in-out",
+          pointerEvents: display ? "none" : "auto",
+        }}
       >
         <div className="max-w-[1440px] min-w-[994px] min-h-[80px] mx-auto px-[96px] py-[20px] flex justify-between items-center">
           <div className="flex align-center">

@@ -1,16 +1,17 @@
 import { Tabs, type TabsProps } from "antd";
 import "@/styles/home/shopList.scss";
-import Selected from "./selected";
-import Footwear from "./footwear";
-import TideClothes from "./tideClothes";
-import Digital from "./digital";
-import Beauty from "./beauty";
-import Watch from "./watch";
-import Home from "./home";
-import Bag from "./bag";
-import Accessories from "./accessories";
-import TrendyToy from "./trendyToy";
-import Ladies from "./Ladies";
+import Selected from "./components/selected";
+import Footwear from "./components/footwear";
+import TideClothes from "./components/tideClothes";
+import Digital from "./components/digital";
+import Beauty from "./components/beauty";
+import Watch from "./components/watch";
+import Home from "./components/home";
+import Bag from "./components/bag";
+import Accessories from "./components/accessories";
+import TrendyToy from "./components/trendyToy";
+import Ladies from "./components/Ladies";
+import { useScroll } from "../../../../hooks/useScroll";
 
 const ShopList: React.FC = () => {
   const tabsList: TabsProps["items"] = [
@@ -75,8 +76,18 @@ const ShopList: React.FC = () => {
     console.log(key);
   };
 
+  const isFixed = useScroll(600);
+
+  const defineStyle: React.CSSProperties = isFixed
+    ? {
+        position: "fixed",
+        top: 0,
+        zIndex: 100,
+      }
+    : {};
+
   return (
-    <div className="shopWrapper">
+    <div className="shopWrapper" style={defineStyle}>
       <div className="innerBox">
         <div className="topBox">
           <Tabs items={tabsList} defaultActiveKey="1" onChange={onChange} />

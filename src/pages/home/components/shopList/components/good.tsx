@@ -1,4 +1,4 @@
-import { type GoodType } from "../types/global";
+import { type GoodType } from "../../../types/global";
 
 const Good: React.FC<GoodType> = (good) => {
   return (

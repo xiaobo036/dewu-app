@@ -107,11 +107,10 @@ const Topbar: React.FC = () => {
   return (
     <Fragment>
       <div
-        className="w-full bg-[#000] fixed z-50 top-0 left-0"
+        className="w-full bg-[#000] fixed z-50 top-0 left-0 show"
         style={{
           display: display ? "none" : "block",
-          transition: "opacity 0.3s ease-in-out",
-          pointerEvents: display ? "none" : "auto",
+          transition: "transform 0.5s",
         }}
       >
         <div className="max-w-[1440px] min-w-[994px] min-h-[80px] mx-auto px-[96px] py-[20px] flex justify-between items-center">

@@ -99,7 +99,6 @@ const institutionServiceItems: MenuProps["items"] = [
 ];
 
 const Topbar: React.FC = () => {
-  
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const display = useScroll(400);
@@ -107,10 +106,9 @@ const Topbar: React.FC = () => {
   return (
     <Fragment>
       <div
-        className="w-full bg-[#000] fixed z-50 top-0 left-0 show"
+        className="w-full bg-[#000] fixed z-50 top-0 left-0 transition-transform duration-300 ease-in-out"
         style={{
-          display: display ? "none" : "block",
-          transition: "transform 0.5s",
+          transform: display ? "translateY(-100%)" : "translateY(0)",
         }}
       >
         <div className="max-w-[1440px] min-w-[994px] min-h-[80px] mx-auto px-[96px] py-[20px] flex justify-between items-center">

@@ -11,7 +11,6 @@ import Bag from "./components/bag";
 import Accessories from "./components/accessories";
 import TrendyToy from "./components/trendyToy";
 import Ladies from "./components/Ladies";
-import { useScroll } from "../../../../hooks/useScroll";
 
 const ShopList: React.FC = () => {
   const tabsList: TabsProps["items"] = [
@@ -76,18 +75,8 @@ const ShopList: React.FC = () => {
     console.log(key);
   };
 
-  const isFixed = useScroll(600);
-
-  const defineStyle: React.CSSProperties = isFixed
-    ? {
-        position: "fixed",
-        top: 0,
-        zIndex: 100,
-      }
-    : {};
-
   return (
-    <div className="shopWrapper" style={defineStyle}>
+    <div className="shopWrapper">
       <div className="innerBox">
         <div className="topBox">
           <Tabs items={tabsList} defaultActiveKey="1" onChange={onChange} />

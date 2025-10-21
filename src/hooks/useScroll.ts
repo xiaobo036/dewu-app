@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 export const useScroll = (distance: number = 400) => {
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {

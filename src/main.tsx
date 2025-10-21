@@ -2,9 +2,10 @@ import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./styles/main.css";
-import "animate.css";
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+const rootDOM = document.getElementById("root") as HTMLElement;
+
+ReactDOM.createRoot(rootDOM).render(
   <StrictMode>
     <App />
   </StrictMode>

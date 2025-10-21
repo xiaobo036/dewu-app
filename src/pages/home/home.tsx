@@ -2,7 +2,7 @@ import { Fragment } from "react/jsx-runtime";
 import Topbar from "./components/topbar/topbar";
 import Content from "./components/content/content";
 import ShopList from "./components/shopList/shopList";
-import BackTop from "../../components/global/backTop";
+import Footer from "../../components/global/footer";
 
 const Home: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const Home: React.FC = () => {
       <Topbar />
       <Content />
       <ShopList />
-      <BackTop />
+      <Footer />
     </Fragment>
   );
 };

@@ -1,0 +1,13 @@
+.footer {
+  @apply w-full bg-primary min-h-[649px];
+
+  .footerContainer {
+    @apply max-w-[1440px] min-w-[1024px] mx-auto text-white px-[72px] py-[96px];
+
+    .footerTop {
+      .topItem {
+        @apply w-[208px] flex flex-col text-left;
+      }
+    }
+  }
+}

@@ -78,18 +78,11 @@ const ShopList: React.FC = () => {
     console.log(key);
   };
 
-  const distance = wrapperRef.current?.offsetHeight || 0;
-  console.log(distance, "distance");
-
-  const isScrolled = useScroll(distance);
-  console.log(isScrolled, "isScrolled");
-
   return (
-    <div className="shopWrapper" ref={wrapperRef}>
+    <div className="shopWrapper">
       <div className="innerBox">
         <div className="topBox">
           <Tabs items={tabsList} defaultActiveKey="1" onChange={onChange} />
-          <div className="shopList"></div>
         </div>
       </div>
     </div>

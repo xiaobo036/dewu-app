@@ -8,7 +8,7 @@ const LazyLoading: React.FC = () => {
         <Spin
           size="large"
           indicator={
-            <LoadingOutlined style={{ fontSize: 65, color: "#000" }} spin />
+            <LoadingOutlined style={{ fontSize: 70, color: "#000" }} spin />
           }
         />
       </Flex>

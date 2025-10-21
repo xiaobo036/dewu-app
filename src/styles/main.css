@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +16,5 @@ body,
 }
 
 body {
-  padding-top: 80px; /* 为固定定位的 topbar 留出空间 */
+  padding-top: 80px;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;

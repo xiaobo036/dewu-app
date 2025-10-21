@@ -4,19 +4,34 @@ import Good from "./good";
 const Home: React.FC = () => {
   const goodList: GoodType[] = [
     {
+      img: "https://cdn.poizon.com/pro-img/cut-img/20240814/9c21a99a633545bba89ec2c94b739242.jpg",
+      name: "【品牌专供】祖玛珑 祖玛珑 居家香氛 蜡烛/烛台",
+      price: 348,
+    },
+    {
+      img: "https://cdn.poizon.com/pro-img/cut-img/20250606/81d57dcf8edc48beb862d9473cd30aa8.jpg",
+      name: "【品牌专供】雨宝 全自动 抗风暴 晴雨两用 防紫外线 雨伞 白色/蓝色/黑色",
+      price: 29,
+    },
+    {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240323/8e7c0d3998564f9e869342c6983e9ac0.jpg",
       name: "【品牌专供】雨宝 16骨全自动 纯色系列自动雨伞 晴雨两用 抗风遮阳伞加大号折叠自动",
       price: 39,
     },
     {
-      img: "https://cdn.poizon.com/pro-img/cut-img/20250525/df257f6dddda4c06b5d2d08c84bf81b3.jpg",
-      name: "【品牌专供】雨宝 12股双骨加粗24骨雨伞晴雨通用加大折叠加厚加固遮阳防晒紫外线全自动太阳伞",
-      price: 49,
+      img: "https://cdn.poizon.com/pro-img/cut-img/20250312/234bc57eaee246f59cb19fca1fb42305.jpg",
+      name: "【品牌专供】雨宝 太阳伞小巧便携防晒防紫外线遮阳伞胶囊雨伞迷你折叠晴雨伞通用",
+      price: 39,
     },
     {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240327/4bd78e77b49c439ba8126d03ca1f766c.jpg",
       name: "【品牌专供】YUOU愉欧 抱抱猫腰靠 靠垫 宿舍床头玩手机看书可爱风腰枕靠枕",
       price: 55,
+    },
+    {
+      img: "https://cdn.poizon.com/pro-img/cut-img/20240330/ec026d366289448ab40435d49d546c8b.jpg",
+      name: "【品牌专供】欧凯斯 免撕抽绳手提式加厚大号家用不脏手抽绳垃圾袋学生宿舍 奶油色系 垃圾袋 清洁用品",
+      price: 16,
     },
     {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240424/995e0f97a0f84db288a2a12bc5ae9d96.jpg",
@@ -29,9 +44,14 @@ const Home: React.FC = () => {
       price: 34,
     },
     {
-      img: "https://cdn.poizon.com/pro-img/cut-img/20240401/1ee963225ae443318f977c9e2faceae6.png",
-      name: "【品牌专供】蓝月亮 洗衣留香 深层洁净 羊绒羊毛 薰衣草洁净  洗衣液 500g*2瓶2斤装家用宿舍用",
-      price: 22,
+      img: "https://cdn.poizon.com/pro-img/cut-img/20240703/abf18211290045829431d049cf40c265.jpg",
+      name: "【品牌专供】DayDream Art 小羊咩咩系列 无火香薰礼盒 生日男女生情侣教师 室内卧室通用持久 精油散香清新 卧室氛围感助眠可爱治愈ins风 香氛",
+      price: 75,
+    },
+    {
+      img: "https://cdn.poizon.com/pro-img/cut-img/20240729/9d531b7579794659be80020ceef13c5d.jpg",
+      name: "【品牌专供】Kappa卡帕 蜂窝颗粒反弓牵引分区护颈椎枕头助睡眠 豆豆针织棉二代SPA按摩护颈枕芯 枕头",
+      price: 49,
     },
     {
       img: "https://cdn.poizon.com/pro-img/cut-img/20250920/1a35c951ec4d4237a18e21bad21f011b.jpg",
@@ -39,13 +59,18 @@ const Home: React.FC = () => {
       price: 47,
     },
     {
+      img: "https://cdn.poizon.com/pro-img/cut-img/20250913/780c47ce1cfe48058c01d3754982fa34.jpg",
+      name: "【品牌专供】LiNing李宁 人字拖防滑耐磨夏季防滑运动 凉拖鞋",
+      price: 35,
+    },
+    {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240427/608b9ba7edbd4ecababc5ade57222ec8.jpg",
       name: "【品牌专供】ZORRO 康斯坦丁 1941复刻版仿古银滚花 黄铜煤油防风打火机 男女生超薄创意个性老式复古打火机",
-      price: 49,
+      price: 59,
     },
     {
       img: "https://cdn.poizon.com/pro-img/cut-img/20250711/a0922e8bdd5d42d2880582950d12577e.png",
-      name: "【品牌专供】言仓 x线条小狗 联名款  快乐小狗尾巴杯 马克杯情侣陶瓷水杯高颜值小众生日送男女生咖啡杯大容量 400mL",
+      name: "【品牌专供】言仓 x线条小狗 联名款 快乐小狗尾巴杯 马克杯情侣陶瓷水杯高颜值小众生日送男女生咖啡杯大容量 400mL",
       price: 59,
     },
     {
@@ -59,24 +84,24 @@ const Home: React.FC = () => {
       price: 49,
     },
     {
+      img: "https://cdn.poizon.com/pro-img/cut-img/20250904/9aed5d4eac4442759df7b970ff10176b.jpg",
+      name: "【品牌专供】细细条 韩式风简约 人字拖夏季软平底学生居家夹脚 凉拖鞋 男女同款 黑色",
+      price: 10,
+    },
+    {
       img: "https://cdn.poizon.com/pro-img/cut-img/20250530/cea11b3ad77540f2be12601c296ab2a1.jpg",
-      name: "【品牌专供】莱登太太  强遮光一体式床帘 学生宿舍上下铺防蚊蚊帐保护隐私宿舍蚊帐",
+      name: "【品牌专供】莱登太太 强遮光一体式床帘 学生宿舍上下铺防蚊蚊帐保护隐私宿舍蚊帐",
       price: 95,
     },
     {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240418/26d96cf3419748fda8e28ed6e28bc2e1.png",
-      name: "【品牌专供】蓝月亮 羊绒羊毛 深层洁净自然香瓶装护理家用宿舍用机洗手洗 洗衣液  500g1斤装",
+      name: "【品牌专供】蓝月亮 羊绒羊毛 深层洁净自然香瓶装护理家用宿舍用机洗手洗 洗衣液 500g1斤装",
       price: 13,
     },
     {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240709/f53af6b4043c46789abf8f451a21df16.jpg",
       name: "【品牌专供】海澜之家 HLA 航空枕 U型枕脖 颈椎记忆棉脖枕 头枕靠枕飞机枕 办公室员工午休枕头 学生午休枕头 护颈专用",
       price: 69,
-    },
-    {
-      img: "https://cdn.poizon.com/pro-img/cut-img/20240420/944dd910d4a94d71adc29336c9f87372.png",
-      name: "【品牌专供】SHIGUDE施古德 休闲风纯色 情侣夏季外穿洞洞鞋足弓软底 凉拖鞋",
-      price: 20,
     },
     {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240422/b704fa4ee9134743a51dcc55fec330e9.jpg",
@@ -99,11 +124,6 @@ const Home: React.FC = () => {
       price: 17,
     },
     {
-      img: "https://cdn.poizon.com/pro-img/cut-img/20240424/a1fa91f863714e2b84a0d6d1c163a0c7.jpg",
-      name: "【品牌专供】植护 初夏樱花香水洗衣液 净化除味 深层洁净衣物清洁持久留香清洗液 4斤*2瓶",
-      price: 30,
-    },
-    {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240424/6a59032d47514e688278d86f109c9280.jpg",
       name: "【品牌专供】植护 晨雾玫瑰 除菌除螨香水洗衣液 羽绒服适用 持久留香自然花香 2斤*1瓶",
       price: 33,
@@ -112,6 +132,11 @@ const Home: React.FC = () => {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240425/fa5b4adc342d42ffab3d39236acce3ed.jpg",
       name: "【品牌专供】植护 绮梦花园内衣内裤除菌99%洗衣液 专用清洗液女士除螨洗内衣液 500g*1瓶",
       price: 39,
+    },
+    {
+      img: "https://cdn.poizon.com/pro-img/cut-img/20240610/71f65610497c440781b2f30f24e138cd.jpg",
+      name: "【品牌专供】ZIPPO 保温杯 高真空温显弹盖 实用水杯 情侣杯子 生日水杯 高颜值水杯 学生水杯 便携式水杯 水杯男生女生保冰保冷 316不锈钢450ml",
+      price: 74,
     },
     {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240425/29c7d084d36243f69556c5d03412ab72.jpg",
@@ -124,19 +149,29 @@ const Home: React.FC = () => {
       price: 59,
     },
     {
+      img: "https://cdn.poizon.com/pro-img/cut-img/20240815/330e143bccaa4e659fe43c20529c0b00.jpg",
+      name: "【品牌专供】蓝月亮 手洗专用家用薰衣草香 洗衣液 便携宿舍学生党 500g加赠旅行装80g 到手两件",
+      price: 15,
+    },
+    {
       img: "https://cdn.poizon.com/pro-img/cut-img/20250122/53cc232b360b4324a6f162cbfd923707.jpg",
-      name: "【品牌专供】ZIPPO 爱情系列 渐变幻彩 秋水含情   男生无法拒绝的zippo打火机 防风煤油打火机礼盒套装",
+      name: "【品牌专供】ZIPPO 爱情系列 渐变幻彩 秋水含情 男生无法拒绝的zippo打火机 防风煤油打火机礼盒套装",
       price: 219,
     },
     {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240502/853f195817624e74a12929f44eb80aa9.jpg",
       name: "【品牌专供】爱夕 眼罩可爱小熊搞怪睡眠遮光 学生游戏护眼夏季午休午睡防光冰贴冰凝袋热敷缓解眼疲劳",
-      price: 19,
+      price: 39,
     },
     {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240703/71cb8cb948364d3eba288c5fd9d1b93a.jpg",
       name: "【品牌专供】宿帕SUPER 椰子洗鞋神器小白鞋泡沫清洗剂无水干洗AJ球鞋除味杀菌快速擦鞋刷鞋去污清洗套装鞋袜除臭防水喷雾10件套 鞋清洁护理剂",
       price: 78,
+    },
+    {
+      img: "https://cdn.poizon.com/pro-img/cut-img/20250301/aee6dfba47f94dbcb1696c43b7714f78.png",
+      name: "【品牌专供】EVANLEY 小清新简约情侣水杯 实用男生女生夏季杯子 水壶茶水分离 夏天水杯 600ml【礼袋款】 学生高颜值塑料吸管杯 赠杯刷",
+      price: 29,
     },
     {
       img: "https://cdn.poizon.com/pro-img/cut-img/20240510/de47234262e149fb994848934f0e9f01.jpg",
@@ -168,43 +203,7 @@ const Home: React.FC = () => {
       name: "【品牌专供】海澜之家 HLA 厚底男款凉拖鞋夏天国潮 踩屎感居家室内防滑耐穿百搭拼色凉拖",
       price: 45,
     },
-    {
-      img: "https://cdn.poizon.com/pro-img/cut-img/20241014/e4defc1e38b14b8ab819573885c8ec06.jpg",
-      name: "【品牌专供】奥观 复古铁塔沙漏计时器水晶球八音盒发光桌面摆件毕业季礼生日男朋友女朋友闺蜜同学男生女生 礼盒装 摆件",
-      price: 78,
-    },
-    {
-      img: "https://cdn.poizon.com/pro-img/cut-img/20250328/0699f2aad5b54b729b1e8f1c0e718a03.jpg",
-      name: "【品牌专供】YOPENG 小白鞋清洗剂 一擦白去污免洗球鞋帆布鞋小白鞋椰子鞋清洗套装干洗清洁剂 AJ鞋除味杀菌鞋袜除臭 鞋清洁护理剂",
-      price: 19,
-    },
-    {
-      img: "https://cdn.poizon.com/pro-img/cut-img/20240804/93e3efce59e44dc2a6d67ca11e8a9624.png",
-      name: "【品牌专供】ZIPPO 爱情系列 锻纱镀铬 秋水含睛 煤油 打火机 礼盒装 品牌 下单 免费刻字 具体联系客服",
-      price: 144,
-    },
-    {
-      img: "https://cdn.poizon.com/pro-img/cut-img/20240710/eeb4f58a91824bf8ba3a1975b077b4d5.jpg",
-      name: "【品牌专供】ZIPPO 保温杯  温馨简约咖啡杯 实用水杯 情侣水杯 水杯男生高颜值 生日水杯 便携式水杯 杯子男生 学生杯子保冰 316不锈钢420ml",
-      price: 83,
-    },
-    {
-      img: "https://cdn.poizon.com/pro-img/cut-img/20250208/14dab1eb196f4fa0afc34505925318ee.jpg",
-      name: "【品牌专供】Starbucks星巴克 星动系列 女生女友 闺蜜 生日 高颜值 秋季水杯 实用家用  高颜值女神杯学生 四季通用 粉色蝴蝶结款玻璃杯吸管杯 550ml",
-      price: 159,
-    },
-    {
-      img: "https://cdn.poizon.com/pro-img/cut-img/20240620/238bca69e3a647eb8d5738a1ba80eca2.jpg",
-      name: "【品牌专供】YOPENG 鞋袜除臭喷雾剂 除味杀菌去异味喷雾去脚臭球鞋鞋袜鞋柜除臭 球鞋防臭生物酶除异味抑菌除菌 学生宿舍用家用",
-      price: 34,
-    },
-    {
-      img: "https://cdn.poizon.com/pro-img/cut-img/20250529/07caa6c1122c4b1299f255422f75d6af.jpg",
-      name: "【品牌专供】COSTA 巨无霸2.0幸运杯保温保冷杯 冰霸杯吸管杯316L不锈钢高颜值可爱治愈创意水杯男生女生情侣生日男女朋友 大容量1.25L",
-      price: 189,
-    },
   ];
-
   return (
     <div className="grid grid-cols-4 gap-4">
       {goodList.map((good, index) => (

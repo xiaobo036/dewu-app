@@ -1,4 +1,5 @@
 import { Tabs, type TabsProps } from "antd";
+import { useEffect, useRef } from "react";
 import "@/styles/home/shopList.scss";
 import Selected from "./components/selected";
 import Footwear from "./components/footwear";
@@ -13,6 +14,8 @@ import TrendyToy from "./components/trendyToy";
 import Ladies from "./components/Ladies";
 
 const ShopList: React.FC = () => {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
   const tabsList: TabsProps["items"] = [
     {
       key: "1",
@@ -75,8 +78,14 @@ const ShopList: React.FC = () => {
     console.log(key);
   };
 
+  const distance = wrapperRef.current?.offsetHeight || 0;
+  console.log(distance, "distance");
+
+  const isScrolled = useScroll(distance);
+  console.log(isScrolled, "isScrolled");
+
   return (
-    <div className="shopWrapper">
+    <div className="shopWrapper" ref={wrapperRef}>
       <div className="innerBox">
         <div className="topBox">
           <Tabs items={tabsList} defaultActiveKey="1" onChange={onChange} />

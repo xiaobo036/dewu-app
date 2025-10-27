@@ -1,0 +1,36 @@
+.goodDetail {
+  @apply flex justify-center gap-[30px] px-[50px] py-[20px];
+}
+
+.leftContainer {
+  @apply flex flex-col items-center gap-[10px];
+
+  .smallImg {
+    @apply w-[150px] h-[150px] cursor-pointer z-40;
+  }
+}
+
+.middleContainer {
+  @apply w-[600px] h-[600px]  p-[25px];
+  border: 0.5px solid #dcdcdc;
+
+  .bigImg {
+    @apply text-center;
+
+    img {
+      @apply w-[460px] h-[460px] object-cover;
+    }
+  }
+}
+
+.rightContainer {
+  @apply w-[400px];
+
+  .goodName {
+    @apply font-semibold text-xl text-[#14151A];
+  }
+
+  .goodPrice{
+    @apply  flex items-center gap-[5px] text-primary my-[10px];
+  }
+}

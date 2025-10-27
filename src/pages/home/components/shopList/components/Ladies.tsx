@@ -208,9 +208,9 @@ const Ladies: React.FC = () => {
   return (
     <div className="grid grid-cols-4 gap-4">
       {goodList.map((good, index) => (
-        <a href="" className="mt-[32px mr-[32px] no-underline" key={index}>
+        <div className="mt-[32px mr-[32px] no-underline" key={index}>
           <Good {...good} />
-        </a>
+        </div>
       ))}
     </div>
   );

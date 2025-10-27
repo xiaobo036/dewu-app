@@ -4,8 +4,8 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footerContainer">
-        <div className="flex">
-          <div className="flex  gap-[130px]">
+        <div className="flex ">
+          <div className="flex gap-[130px]">
             <div className="topItem">
               <div className="text-[16px] font-[600]">关联平台</div>
               <div className="text-[14px] font-normal mt-[20px] text-[#ececf2]">

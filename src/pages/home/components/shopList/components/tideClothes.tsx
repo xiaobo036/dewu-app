@@ -2,7 +2,6 @@ import { type GoodType } from "../../../types/global";
 import Good from "./good";
 
 const tideClothes: React.FC = () => {
-  
   const goodList: GoodType[] = [
     {
       img: "https://cdn.poizon.com/pro-img/cut-img/20250328/179e12df3a66469dbdb132bd4bca7250.jpg",
@@ -209,9 +208,9 @@ const tideClothes: React.FC = () => {
   return (
     <div className="grid grid-cols-4 gap-4">
       {goodList.map((good, index) => (
-        <a href="" className="mt-[32px mr-[32px] no-underline" key={index}>
+        <div className="mt-[32px mr-[32px] no-underline" key={index}>
           <Good {...good} />
-        </a>
+        </div>
       ))}
     </div>
   );

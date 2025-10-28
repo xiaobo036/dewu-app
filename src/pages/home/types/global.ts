@@ -3,3 +3,8 @@ export interface GoodType {
   name: string;
   price: number;
 }
+
+export interface GoodDetailRef {
+  openModal(): void;
+}
+

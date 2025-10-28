@@ -6,6 +6,10 @@ const router = createBrowserRouter([
     path: "/",
     Component: lazy(() => import("../pages/home/home")),
   },
+  {
+    path: "/community",
+    Component: lazy(() => import("../pages/community/community")),
+  }
 ]);
 
 export default router;

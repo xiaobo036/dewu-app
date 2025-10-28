@@ -1,0 +1,30 @@
+.goodDetail {
+  @apply flex justify-center gap-[100px] p-[20px];
+}
+
+.leftContainer {
+  @apply w-[500px] h-[500px]  p-[25px];
+  border: 0.5px solid #dcdcdc;
+
+  img {
+    @apply w-[435px] h-[435px] object-cover;
+  }
+}
+
+.rightContainer {
+  @apply w-[400px] ml-[25px];
+
+  .goodName {
+    @apply font-semibold text-xl text-[#14151A];
+
+    :after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+      height: 28px;
+      width: 56px;
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}

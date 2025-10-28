@@ -1,6 +1,7 @@
 import { Modal } from "antd";
 import React, { useImperativeHandle, useState } from "react";
 import type { GoodDetailRef, GoodType } from "../../../types/global";
+import "@/styles/home/goodDetail.scss";
 
 /**
  * 商品详情组件
@@ -28,16 +29,24 @@ const GoodDetail = React.forwardRef<GoodDetailRef, GoodType>(
         open={isOpen}
         onCancel={closeModal}
         width={"80%"}
-        height={"600px"}
+        style={{ top: 40 }}
       >
-        <div className="flex justify-between gap-[120px]">
-          <div className="">
-            <img
-              width={"635px"}
-              height={"635px"}
-              src={props.img}
-              alt="高清大图"
-            />
+        <div className="w-full min-h-[600px] overflow-y-auto">
+          <div className="goodDetail">
+            <div className="leftContainer">
+              <div className="imgThumbnail">
+                <img src={props.img} alt="商品大图" />
+              </div>
+              <div className="imgList"></div>
+            </div>
+            <div className="rightContainer">
+              <div
+                className="goodName"
+                style={{ height: "56px", overflow: "hidden" }}
+              >
+                {props.name}
+              </div>
+            </div>
           </div>
         </div>
       </Modal>

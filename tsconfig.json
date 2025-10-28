@@ -5,9 +5,10 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": ".", // 基础路径（相对于 tsconfig.json 位置）
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"] // @/* 映射到 src/*
     }
+    // 其他配置...
   }
 }

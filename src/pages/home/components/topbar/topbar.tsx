@@ -133,7 +133,7 @@ const Topbar: React.FC = () => {
               <a className="menu-text" href="/">
                 首页
               </a>
-              <a className="menu-text" href="/">
+              <a className="menu-text" href="/community">
                 社区精选
               </a>
               <Space className="menu-text">

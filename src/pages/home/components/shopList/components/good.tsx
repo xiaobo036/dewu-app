@@ -1,24 +1,33 @@
 import { Fragment } from "react/jsx-runtime";
-import { useRef } from "react";
-import type { GoodType, GoodDetailRef } from "../../../types/global";
-
-import GoodDetail from "./goodDetail";
+import type { GoodType } from "../../../types/global";
 import "@/styles/home/good.scss";
+import { useNavigate } from "react-router";
 
 const Good: React.FC<GoodType> = (good) => {
-  const modalRef = useRef<GoodDetailRef | null>(null);
+  const navigate = useNavigate();
 
-  const goodClicked = () => {
-    console.log("openModal");
-
-    if (modalRef.current) {
-      modalRef.current.openModal();
+  /**
+   * 在react中实现路由跳转有两种方式一种是通过标签 Link、NavLink实现
+   * <NavLink to="/detail">详情</NavLink>
+   * 另外一种方式是通过Js编程式导航实现
+   * navigate('/detail')
+   * navigate('/detail', { replace: true }) // replace: true 表示替换当前路由，而不是添加新路由
+   * navigate('/detail', { state: { id: 1 } }) // state: { id: 1 } 表示传递参数
+   * navigate(-1) // 返回上一页
+   * navigate(1) // 前进一页
+   */
+  const openDetail = (name: GoodType["name"]) => {
+    if (name) {
+      navigate(`/good-detail`, { state: { name } });
     }
   };
 
   return (
     <Fragment>
-      <div className="w-[288px] cursor-pointer" onClick={goodClicked}>
+      <div
+        className="w-[288px] cursor-pointer"
+        onClick={() => openDetail(good.name)}
+      >
         <img
           className="img-animation"
           width={288}
@@ -32,7 +41,6 @@ const Good: React.FC<GoodType> = (good) => {
           {good.price && "￥" + good.price}
         </div>
       </div>
-      <GoodDetail ref={modalRef} {...good} />
     </Fragment>
   );
 };

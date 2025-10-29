@@ -1,7 +1,12 @@
 import { Modal } from "antd";
-import React, { useImperativeHandle, useState } from "react";
+import React, { useImperativeHandle, useState, useRef } from "react";
 import type { GoodDetailRef, GoodType } from "../../../types/global";
 import "@/styles/home/goodDetail.scss";
+
+interface smallImgType {
+  id: number;
+  rotate: string;
+}
 
 /**
  * 商品详情组件
@@ -10,6 +15,8 @@ import "@/styles/home/goodDetail.scss";
 const GoodDetail = React.forwardRef<GoodDetailRef, GoodType>(
   (props: GoodType, ref) => {
     const [isOpen, setIsOpen] = useState(false);
+
+    const bigImgRef = useRef<HTMLImageElement>(null);
 
     const openModal = () => {
       setIsOpen(true);
@@ -23,6 +30,51 @@ const GoodDetail = React.forwardRef<GoodDetailRef, GoodType>(
       openModal,
     }));
 
+    const imgList: smallImgType[] = [
+      {
+        id: 1,
+        rotate: "0deg",
+      },
+      {
+        id: 2,
+        rotate: "45deg",
+      },
+      {
+        id: 3,
+        rotate: "90deg",
+      },
+      {
+        id: 4,
+        rotate: "-45deg",
+      },
+    ];
+
+    const getImageList = imgList.map((row, index) => {
+      return (
+        <div
+          className="smallImg"
+          key={index}
+          onClick={() => openBig(row.rotate)}
+        >
+          <img
+            src={props.img}
+            alt="small-img"
+            style={{
+              width: 150,
+              height: 150,
+              rotate: row.rotate,
+            }}
+          />
+        </div>
+      );
+    });
+
+    const openBig = (rotate: smallImgType["rotate"]) => {
+      if (bigImgRef.current) {
+        bigImgRef.current.style.rotate = rotate;
+      }
+    };
+
     return (
       <Modal
         title={"商品详情"}
@@ -33,18 +85,19 @@ const GoodDetail = React.forwardRef<GoodDetailRef, GoodType>(
       >
         <div className="w-full min-h-[600px] overflow-y-auto">
           <div className="goodDetail">
-            <div className="leftContainer">
-              <div className="imgThumbnail">
-                <img src={props.img} alt="商品大图" />
+            <div className="leftContainer">{getImageList}</div>
+            <div className="middleContainer">
+              <div className="bigImg">
+                <img src={props.img} alt="big-img" ref={bigImgRef} />
               </div>
-              <div className="imgList"></div>
             </div>
             <div className="rightContainer">
-              <div
-                className="goodName"
-                style={{ height: "56px", overflow: "hidden" }}
-              >
-                {props.name}
+              <div className="goodName">{props.name}</div>
+              <div className="goodPrice">
+                <span>{props.price ? "￥" : ""}</span>
+                <span>{props.price}</span>
+                <span>{props.price ? "起" : ""}</span>
+                <span className="text-sm text-">前往App查看</span>
               </div>
             </div>
           </div>

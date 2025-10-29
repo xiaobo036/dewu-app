@@ -7,5 +7,6 @@ export interface CardItem {
         name: string,
         likes: number,
     },
-    height?: number,
+    height?: number;
+    aspectRatio?: number;
 }

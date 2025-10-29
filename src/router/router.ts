@@ -7,6 +7,10 @@ const router = createBrowserRouter([
     Component: lazy(() => import("../pages/home/home")),
   },
   {
+    path: "/good-detail",
+    Component: lazy(() => import("../pages/detail/detail"))
+  },
+  {
     path: "/community",
     Component: lazy(() => import("../pages/community/community")),
   }

@@ -1,60 +1,57 @@
 @tailwind utilities;
 
 .container {
-  @apply w-[1090px] mx-auto my-[75px];
+  @apply w-full max-w-[1090px] mx-auto my-[75px] px-4;
 
   .title {
     @apply font-medium text-2xl text-[#2b2c3c] mb-[30px];
   }
 
   .content {
-    @apply min-h-[2400px];
-    transition: "min-Height 0.3s ease-in-out";
+    @apply min-h-[2400px] relative;
+
+    .masonry-grid {
+      @apply w-full;
+    }
 
     .card-item {
-      @apply fade-in rounded-lg bg-white overflow-hidden cursor-pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      transform: translateY(-0.256);
-      will-change: transform;
+      @apply fade-in rounded-lg bg-white overflow-hidden cursor-pointer shadow-md transition-all duration-300;
+
+      &:hover {
+        @apply transform -translate-y-1 shadow-xl;
+      }
 
       .card-footer {
-        @apply p-[12px] flex flex-col justify-between items-start gap-[10px] bg-white;
-        transition: all 0.3s ease;
+        @apply p-[12px] flex flex-col gap-[10px] bg-white;
 
         .card-title {
-          @apply text-sm text-[#333] leading-[1.4];
+          @apply text-sm text-[#333] leading-[1.4] line-clamp-2;
         }
 
         .card-author {
-          @apply w-full flex items-center text-[#888] text-xs mt-auto;
+          @apply w-full flex items-center text-[#888] text-xs;
 
           .author-details {
             @apply flex items-center flex-1;
 
             .author-avatar {
-              @apply w-[24px] h-[24px] rounded-full bg-[#f0f0f0] mr-[8px];
+              @apply w-[24px] h-[24px] rounded-full bg-[#f0f0f0] mr-[8px] object-cover;
             }
 
             .author-name {
-              @apply flex-1 mr-[8px];
+              @apply flex-1 mr-[8px] truncate;
             }
+          }
 
-            .likes {
-              @apply flex items-center gap-[4px];
-
-              svg {
-                @apply flex-shrink-0;
-              }
-            }
+          .likes {
+            @apply flex items-center gap-[4px] whitespace-nowrap;
           }
         }
       }
+    }
 
-      &:hover {
-        transform: translateY(-4.315px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-      }
+    .loading {
+      @apply text-center py-8 text-[#888] text-sm;
     }
   }
 }
@@ -69,22 +66,20 @@
     column-gap: 1.5rem;
   }
 
+  @screen sm {
+    .masonry-grid { column-count: 2; }
+  }
+
   @screen md {
-    .masonry-grid {
-      column-count: 2;
-    }
+    .masonry-grid { column-count: 2; }
   }
 
   @screen lg {
-    .masonry-grid {
-      column-count: 3;
-    }
+    .masonry-grid { column-count: 3; }
   }
 
   @screen xl {
-    .masonry-grid {
-      column-count: 4;
-    }
+    .masonry-grid { column-count: 4; }
   }
 
   .masonry-item {

@@ -1,33 +1,17 @@
 .main-wrapper {
-  width: 100% !important;
-  position: relative;
-  background: #000;
+  @apply w-full  relative bg-primary;
 
   .background {
-    position: relative;
+    @apply relative top-0 left-0 min-h-[460px];
     background: url(https://h5static.dewucdn.com/node-common/cf582f4d-9e78-6e1b-2893-0f18eebbd383-2880-920.png);
     background-repeat: no-repeat;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 460px;
 
     .document {
-      color: #fff;
-      position: relative;
-      max-width: 1440px;
-      min-width: 1024px;
-      color: #fff;
-      height: 460px;
-      margin: 0 auto;
+      @apply relative text-[#fff] max-w-[1440px] min-w-[1240px] h-[460px] mx-auto my-0;
 
       .topBox {
-        width: 100%;
-        height: 90px;
-        position: absolute;
+        @apply w-full absolute h-[90px] z-[99] pointer-events-none;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), transparent);
-        z-index: 99;
-        pointer-events: none;
       }
 
       img {
@@ -39,11 +23,7 @@
       }
 
       .carouselRight {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-        margin-right: 168px;
+        @apply flex justify-between items-center gap-5 mr-[168px];
 
         .posterRollUp {
           animation: rollUp 12s linear infinite;
@@ -68,9 +48,7 @@
 }
 
 :where(.css-dev-only-do-not-override-l9pxc0).ant-carousel {
-  width: 140px;
-  height: 460px;
-  padding-top: 80px;
+  @apply w-[140px] h-[460px] pt-[80px];
 }
 
 @keyframes rollUp {

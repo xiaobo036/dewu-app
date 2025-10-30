@@ -2,8 +2,7 @@
   @apply w-full min-h-[600px] bg-[white] z-[99] sticky top-0 left-0;
 
   .innerBox {
-    @apply max-w-[1440px] min-w-[1024px] min-h-[100vh];
-    margin: 0 auto;
+    @apply max-w-[1440px] min-w-[1024px] min-h-[100vh] mx-auto my-0;
     padding: 16px 96px 100px;
   }
 }

@@ -1,6 +1,6 @@
 import "@/styles/community/content.scss";
 import { useEffect, useRef, useState } from "react";
-import type { CardItem } from "../types/content";
+import type { CardItem } from "@/pages/community/types/content";
 
 const Content: React.FC = () => {
   // 原始数据池（实际项目中可替换为API请求数据）

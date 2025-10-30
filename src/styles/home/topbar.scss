@@ -1,14 +1,8 @@
 .menu-text {
-  color: #c7c7d7;
-  font-size: 1rem;
-  margin-left: 32px;
-  line-height: 1.6875rem;
-  font-weight: normal;
-  text-decoration: none;
+  @apply text-[#c7c7d7] text-base ml-8 font-normal leading-6 no-underline;
 
   &:hover {
-    color: #fff;
-    font-weight: 700;
+    @apply text-[#fff] font-bold;
   }
 }
 
@@ -17,17 +11,13 @@
 }
 
 .ant-dropdown {
-  background-color: #000;
-  padding: 5px;
+  @apply bg-primary p-[5px];
 
   .ant-dropdown-menu {
-    background-color: #000;
+    @apply bg-primary;
 
     .ant-dropdown-menu-item {
-      color: #c7c7d7;
-      font-size: 16px;
-      font-weight: 500;
-      text-align: left;
+      @apply text-[#c7c7d7] text-base font-medium text-left;
 
       &:hover {
         color: #fff !important;

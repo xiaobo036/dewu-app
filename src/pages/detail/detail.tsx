@@ -1,6 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
-import Footer from "../../components/global/footer";
-import Topbar from "../home/components/topbar/topbar";
+import Footer from "@/components/global/footer";
+import Topbar from "@/pages/home/components/topbar/topbar";
 import Content from "./components/content";
 
 const GoodDetail: React.FC = () => {

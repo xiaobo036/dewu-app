@@ -8,7 +8,6 @@ import autoprefixer from "autoprefixer";
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    // 配置路径别名
     alias: {
       "@": path.resolve(__dirname, "src"),
     },

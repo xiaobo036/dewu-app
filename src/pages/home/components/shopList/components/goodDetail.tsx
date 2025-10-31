@@ -1,6 +1,6 @@
 import { Modal } from "antd";
 import React, { useImperativeHandle, useState, useRef } from "react";
-import type { GoodDetailRef, GoodType } from "../../../types/global";
+import type { GoodDetailRef, GoodType } from "../../../types/good";
 import "@/styles/home/goodDetail.scss";
 
 interface smallImgType {

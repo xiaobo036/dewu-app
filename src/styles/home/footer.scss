@@ -46,8 +46,7 @@
             @apply flex flex-col text-[#fff] ml-[16px] gap-2;
 
             .download {
-              @apply w-[245px] h-[60px] rounded-sm  flex items-center pl-3;
-              border: 0.5px solid #c7c7c7;
+              @apply w-[245px] h-[60px] rounded-sm  flex items-center pl-3 border-solid border-[0.5px] border-[#c7c7c7];
             }
           }
         }

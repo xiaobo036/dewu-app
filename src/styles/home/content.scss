@@ -2,9 +2,8 @@
   @apply w-full  relative bg-primary;
 
   .background {
-    @apply relative top-0 left-0 min-h-[460px];
+    @apply relative top-0 left-0 min-h-[460px] bg-no-repeat;
     background: url(https://h5static.dewucdn.com/node-common/cf582f4d-9e78-6e1b-2893-0f18eebbd383-2880-920.png);
-    background-repeat: no-repeat;
 
     .document {
       @apply relative text-[#fff] max-w-[1440px] min-w-[1240px] h-[460px] mx-auto my-0;

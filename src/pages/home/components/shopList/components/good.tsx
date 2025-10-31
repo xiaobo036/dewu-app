@@ -1,5 +1,5 @@
 import { Fragment } from "react/jsx-runtime";
-import type { GoodType } from "../../../types/global";
+import type { GoodType } from "../../../types/good";
 import "@/styles/home/good.scss";
 import { useNavigate } from "react-router";
 

@@ -1,6 +1,7 @@
 import "@/styles/community/content.scss";
 import { useEffect, useRef, useState } from "react";
 import type { CardItem } from "@/pages/community/types/content";
+import { Spin } from "antd";
 
 const Content: React.FC = () => {
   // 原始数据池（实际项目中可替换为API请求数据）
@@ -244,7 +245,7 @@ const Content: React.FC = () => {
         </div>
 
         {/* 加载状态提示 */}
-        {isLoading && <div className="loading">加载中...</div>}
+        {isLoading && <div className="loading"><Spin /></div>}
         {!isLoading && !hasMore && (
           <div className="loading">没有更多内容了</div>
         )}
